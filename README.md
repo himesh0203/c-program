@@ -1,9 +1,7 @@
-#include <stdio.h>
-#include<conio.h>
-void main ()
 // C program to print
 // inverted pyramid
 // pattern
+#include <stdio.h>
 
 // Driver code
 int main()
