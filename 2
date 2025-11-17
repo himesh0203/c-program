@@ -1,23 +1,31 @@
-#include<iostream>
-#include<iomanip> using
-namespace std; int
-main()
+#include <iostream>
+using namespace std;
+
+int main()
 {
-int N, i, j, isPrime;
-cout << "Enter the value of N to find prime numbers upto : "; cin >> N;
-for(i = 2; i <= N; i++)
-{
-isPrime = 0;
-for(j = 2; j <= i/2; j++)
-{
-if(i % j == 0)
-{
-isPrime = break 1;
-;
+    int N, i, j;
+    bool isPrime;
+
+    cout << "Enter the value of N to find prime numbers up to: ";
+    cin >> N;
+
+    for (i = 2; i <= N; i++)
+    {
+        isPrime = true;
+
+        for (j = 2; j <= i / 2; j++)
+        {
+            if (i % j == 0)
+            {
+                isPrime = false;
+                break;      // ← Just break the loop
+            }
+        }
+
+        if (isPrime)
+            cout << i << " ";
+    }
+
+    return 0;
 }
-}
-if(isPrime==0 && N!= 1)
-cout << i << " ";
-}
-return 0;
-}
+
