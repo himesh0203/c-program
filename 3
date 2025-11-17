@@ -1,33 +1,56 @@
-#include<iostream>
-#include<iomanip>
+#include <iostream>
+#include <iomanip>
 using namespace std;
+
 int main()
 {
-inta,b; char
-ch;
-cout<< "Enter a and b values : "; cin >>
-a >> b;
-cout << "CatLog To Select Certain Operations "<<endl; cout <<
-"+ -> Addition"<<endl;
-cout << "- -> Subtraction"<<endl;
-cout << "* -> Multiplication"<<endl; cout << "/
--> Division"<<endl;
-cout << "% -> Modulo Division"<<endl;
-cout << "Enter any above sign to perform certain operations : "; cin >> ch ;
-switch(ch)
-{
-case '+' :
-cout << "Addition of "<< a <<"and "<< b <<" is : "<<(a+b)<<endl; break;
-case '-' :
-cout << "Substraction of "<< a <<"and "<< b <<" is : "<<(a-b)<<endl; break;
-case '*' :
-cout << "Multiplication of "<< a <<"and "<< b <<" is :"<<(a*b)<<endl;
-case '/' :
-case '%' :
-break;
-cout << "Division of "<< a <<"and "<< b <<" is : "<<(a/b)<<endl; break;
-cout << "Modulo of "<< a <<"and "<< b <<" is : "<<(a%b)<<endl; break;
-default : cout<< "Enter the operations seen in catlog"<<endl;
-}
-return 0;
+    int a, b;
+    char ch;
+
+    cout << "Enter a and b values : ";
+    cin >> a >> b;
+
+    cout << "Catalog To Select Certain Operations " << endl;
+    cout << "+ -> Addition" << endl;
+    cout << "- -> Subtraction" << endl;
+    cout << "* -> Multiplication" << endl;
+    cout << "/ -> Division" << endl;
+    cout << "% -> Modulo Division" << endl;
+
+    cout << "Enter any above sign to perform certain operation : ";
+    cin >> ch;
+
+    switch(ch)
+    {
+        case '+':
+            cout << "Addition of " << a << " and " << b << " is : " << (a + b) << endl;
+            break;
+
+        case '-':
+            cout << "Subtraction of " << a << " and " << b << " is : " << (a - b) << endl;
+            break;
+
+        case '*':
+            cout << "Multiplication of " << a << " and " << b << " is : " << (a * b) << endl;
+            break;
+
+        case '/':
+            if (b == 0)
+                cout << "Error: Division by zero!" << endl;
+            else
+                cout << "Division of " << a << " and " << b << " is : " << (a / b) << endl;
+            break;
+
+        case '%':
+            if (b == 0)
+                cout << "Error: Modulo by zero!" << endl;
+            else
+                cout << "Modulo of " << a << " and " << b << " is : " << (a % b) << endl;
+            break;
+
+        default:
+            cout << "Enter a valid operation from the catalog." << endl;
+    }
+
+    return 0;
 }
