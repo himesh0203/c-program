@@ -1,34 +1,45 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-void swap_value(int ,int);
-voidswap_reference(int&,int&); int
-main()
+
+void swap_value(int, int);
+void swap_reference(int&, int&);
+
+int main()
 {
-int a,b;
-cout << "Enter a and b values : "; cin >>
-a >> b;
-cout<< "Swap two numbers by call by value "<<endl;
-swap_value(a,b);
-cout<< "Swap two numbers by call by reference"<<endl; swap_reference(a,b);
-return 0;
+    int a, b;
+
+    cout << "Enter a and b values : ";
+    cin >> a >> b;
+
+    cout << "\nSwap two numbers by call by value" << endl;
+    swap_value(a, b);
+
+    cout << "\nSwap two numbers by call by reference" << endl;
+    swap_reference(a, b);
+
+    return 0;
 }
+
 void swap_value(int a, int b)
 {
-inttemp;
-temp=a;
-a=b;
-b=temp;
-cout <<"After swapping by call by value : "<<endl; cout <<
-"a = "<<a<<endl;
-cout << "b = "<<b<<endl;
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
+
+    cout << "After swapping by call by value :" << endl;
+    cout << "a = " << a << endl;
+    cout << "b = " << b << endl;
 }
+
 void swap_reference(int &a, int &b)
 {
-inttemp;
-temp=a;
-a=b;
-b=temp;
-cout <<"After swapping by call by value : "<<endl; cout <<
-"a = "<<a<<endl;
-cout << "b = "<<b<<endl;
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
+
+    cout << "After swapping by call by reference :" << endl;
+    cout << "a = " << a << endl;
+    cout << "b = " << b << endl;
 }
